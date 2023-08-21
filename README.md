@@ -16,3 +16,8 @@ the plugin manager.
 
 
 **TODO:** Describe your plugin's configuration options (if any).
+
+
+
+Using this tutorial to get started. 
+https://docs.octoprint.org/en/master/plugins/gettingstarted.html#saying-hello-how-to-make-the-plugin-actually-do-something
