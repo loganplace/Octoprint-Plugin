@@ -11,28 +11,33 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
+
+
 class HelloworldPlugin(octoprint.plugin.SettingsPlugin,
     octoprint.plugin.AssetPlugin,
     octoprint.plugin.TemplatePlugin
 ):
+    # log after startup
+    def on_after_startup(self):
+        self._logger.info("Hello World!")
 
     ##~~ SettingsPlugin mixin
 
-    def get_settings_defaults(self):
-        return {
-            # put your plugin's default settings here
-        }
+    # def get_settings_defaults(self):
+    #     return {
+    #         # put your plugin's default settings here
+    #     }
 
-    ##~~ AssetPlugin mixin
+    # ##~~ AssetPlugin mixin
 
-    def get_assets(self):
-        # Define your plugin's asset files to automatically include in the
-        # core UI here.
-        return {
-            "js": ["js/helloworld.js"],
-            "css": ["css/helloworld.css"],
-            "less": ["less/helloworld.less"]
-        }
+    # def get_assets(self):
+    #     # Define your plugin's asset files to automatically include in the
+    #     # core UI here.
+    #     return {
+    #         "js": ["js/helloworld.js"],
+    #         "css": ["css/helloworld.css"],
+    #         "less": ["less/helloworld.less"]
+    #     }
 
     ##~~ Softwareupdate hook
 
